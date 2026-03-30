@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍟 Snack Hub</h1>
+        <p>Your Favorite Chips & Noodles 😋</p>
+      </header>
+      
+      <nav>
+        <a href="#chips">Chips</a>
+        <a href="#noodles">Noodles</a>
+        <a href="#contact">Contact</a>
+        <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+
+     </nav>
+      
+      <section class="hero">
+        <h1>Crunchy + Spicy = Happiness 😍</h1>
+      </section>
+      
+      <!-- CHIPS -->
+      <section id="chips" class="section">
+        <h2>🔥 Popular Chips</h2>
+      
+        <div class="grid">
+          <div class="card lays">
+            <img src="https://down-my.img.susercontent.com/file/my-11134207-7r98s-lvof6mc7ibkt39">
+            <h3>Lays</h3>
+            <p>Classic crispy chips 😍</p>
+            <button onclick="addToCart('Lays')">Add to Cart 🛒</button>
+          </div>
+      
+          <div class="card kurkure">
+            <img src="https://www.pepsnacks.com/prod/s3fs-public/2023-01/Kurkure_Hamburger.jpg">
+            <h3>Kurkure</h3>
+            <p>Masala masti 😋</p>
+            <button onclick="addToCart('Kurkure')">Add to Cart 🛒</button>
+          </div>
+      
+          <div class="card pringles">
+            <img src="https://i5-richmedia.walmartimages.com/asr-rm/85ada312-a41e-4ea7-8226-fc4832442be3_video_walmart.jpg?odnHeight=117&odnWidth=117&odnBg=FFFFFF">
+            <h3>Pringles</h3>
+            <p>Once you pop… 🔥</p>
+            <button onclick="addToCart('Pringles')">Add to Cart 🛒</button>
+          </div>
+
+          <div class="card tooyumm">
+            <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/0707481f-4baf-436f-8a18-71ed57c6633b.__CR0,0,970,600_PT0_SX970_V1___.jpg">
+            <h3>Too Yumm Chips</h3>
+            <p>Masaledaar mazza 😍</p>
+            <button onclick="addToCart('Too Yumm')">Add to Cart 🛒</button>
+          </div>
+          
+          <div class="card doritos">
+            <img src="https://i5.walmartimages.com/asr/1841b352-50d4-4665-8f10-5bc5f17f1207_1.41a6d74e9dc7174be49b63e82d9dd654.jpeg">
+            <h3>Doritos</h3>
+            <p>Crispy & fun 🔥</p>
+            <button onclick="addToCart('Doritos')">Add to Cart 🛒</button>
+          </div>
+          
+          <div class="card cheetos">
+            <img src="https://www.snackhistory.com/wp-content/uploads/2022/08/Cheetos-2.jpg">
+            <h3>Cheetos</h3>
+            <p>Crunchy corn cheese😋</p>
+            <button onclick="addToCart('Cheetos')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- NOODLES -->
+      <section id="noodles" class="section noodles-bg">
+        <h2>🍜 Noodles Collection</h2>
+      
+        <div class="grid">
+          <div class="card maggi">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.rRV92XAelOIqnSRdwlNaWgHaHa?w=2048&h=2048&rs=1&pid=ImgDetMain&o=7&rm=3">
+            <h3>Maggi</h3>
+            <p>2 min happiness 💛</p>
+            <button onclick="addToCart('Maggi')">Add to Cart 🛒</button>
+          </div>
+      
+          <div class="card yippee">
+            <img src="https://finegrocery.in/wp-content/uploads/2021/03/sunfeast-yippee-280g.jpg">
+            <h3>Yippee</h3>
+            <p>No sticky noodles 😍</p>
+            <button onclick="addToCart('Yippee')">Add to Cart 🛒</button>
+          </div>
+      
+          <div class="card korean">
+            <img src="https://i5.walmartimages.com/seo/Samyang-Buldak-Ramen-Variety-5-Packs-Original-Carbo-Cheese-Jjajang-Stew-l-Fire-Noodles-Noodles-Absol-Capital-Chopsticks_d1358cc7-0e34-40af-a5d6-cb6fe2d90452.1dcfc81dd313636bce8d68ee3482ac0d.jpeg">
+            <h3>Buldak Ramen</h3>
+            <p>Spicy ramen 🔥</p>
+            <button onclick="addToCart('Buldak Ramen')">Add to Cart 🛒</button>
+          </div>
+
+          
+          <div class="card knorr">
+            <img src="https://assets.unileversolutions.com/v1/125358725.jpg">
+            <h3>Knorr Cup Noodles</h3>
+            <p>Good Cup Food</p>
+            <button onclick="addToCart('Knorr Cup Noodles')">Add to Cart 🛒</button>
+          </div>
+
+          <div class="card haka">
+            <img src="https://i5.walmartimages.com/seo/Ching-s-Secret-Veg-Hakka-Noodles-150-Gm-5-3-Oz_54e560b3-443d-47d3-ad6b-6c53c177003d.62edf3b966f0120278b3aa47835f428e.jpeg">
+            <h3>Ching's Hakka Noodles</h3>
+            <p>Ready to Eat</p>
+            <button onclick="addToCart('Chings Hakka Noodles')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <h2>📞 Contact</h2>
+      
+        <form>
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+      
+      <footer>
+        <p>© 2026 Snack Hub</p>
+      </footer>
+
+      
+      <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+        function addToCart(item) {
+            cart.push(item);
+            localStorage.setItem("cart", JSON.stringify(cart));
+        
+            alert(item + " added to cart 🛒");
+        
+            document.getElementById("cart-count").innerText = cart.length;
+        }
+        
+        // ✅ show saved cart on reload
+        document.getElementById("cart-count").innerText = cart.length;
+      </script>
+
+       <h3>🛒 Cart: <span id="cart-count">0</span></h3>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    body {
+      background:
+      linear-gradient(rgba(203, 169, 169, 0.5), rgba(87, 52, 52, 0.5)),
+      url('blurred_background.png');
+      background-size: cover;
+    }
+    
+    #cart-items {
+      background: rgba(170, 123, 123, 0.8);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 15px;
+    }
+</style>
+
+<body>
+
+    <h1>🛒 Your Cart</h1>
+
+    <ul id="cart-items"></ul>
+
+    <button onclick="clearCart()">Clear Cart ❌</button>
+
+    <script>
+     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+     let prices = {
+      "Lays": 200,
+      "Kurkure": 200,
+      "Pringles": 600,
+      "Too Yumm": 300,
+      "Doritos": 450,
+      "Cheetos": 280,
+      "Maggi": 355,
+      "Yippee": 325,
+      "Buldak Ramen": 750,
+      "Knorr Cup Noodles": 425,
+      "Chings Hakka Noodles": 315
+     };
+    
+     let list = document.getElementById("cart-items");
+     let total = 0;
+    
+     cart.forEach((item, index) => {
+      let li = document.createElement("li");
+    
+      let price = prices[item] || 0;
+      total += price;
+    
+      li.innerHTML = `
+        ${item} - ₹${price} 
+        <button onclick="removeItem(${index})">❌</button>
+      `;
+    
+      list.appendChild(li);
+     });
+    
+    document.body.innerHTML += `<h2>Total: ₹${total}</h2>`;
+    
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload();
+    }
+    
+    function clearCart() {
+      localStorage.removeItem("cart");
+      location.reload();
+    }
+    </script>
+
+    <button onclick="goToCheckout()">Checkout 💳</button>
+
+    <script>
+    function goToCheckout() {
+        window.location.href = "checkout.html";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #434343);
+      color: white;
+      font-family: Arial;
+      text-align: center;
+    }
+
+    form {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      margin: 30px auto;
+      width: 300px;
+      border-radius: 15px;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      background: orange;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+
+<style>
+    body {
+      background:
+      linear-gradient(rgba(203, 169, 169, 0.5), rgba(87, 52, 52, 0.5)),
+      url('blurred_background.png');
+      background-size: cover;
+    }
+</style>
+
+<body>
+
+<h1>💳 Checkout</h1>
+
+<h2>Total Items: <span id="total-items"></span></h2>
+
+<form onsubmit="placeOrder(event)">
+  <input type="text" placeholder="Your Name" required><br>
+  <input type="text" placeholder="Address" required><br>
+  <input type="tel" placeholder="Phone Number" required><br>
+
+  <button type="submit">Place Order ✅</button>
+</form>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+document.getElementById("total-items").innerText = cart.length;
+
+function placeOrder(e) {
+  e.preventDefault();
+
+  alert("🎉 Order placed successfully!");
+
+  localStorage.removeItem("cart");
+
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

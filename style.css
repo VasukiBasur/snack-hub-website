@@ -1,0 +1,246 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+  }
+  
+  body{
+    margin:0;
+    padding:0;
+  
+    background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('blurred_background.png');
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  /* HEADER */
+  header{
+    background: linear-gradient(90deg,#ff3d00,#ff9100);
+    color:white;
+    text-align:center;
+    padding:20px;
+    animation: fadeDown 1s ease;
+  }
+  
+  header h1{
+    font-size:2.5rem;
+  }
+  
+  /* NAV */
+  nav{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    background:whitesmoke;
+    padding:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav a{
+    text-decoration:none;
+    font-weight:600;
+    color:#ff3d00;
+    transition:0.3s;
+  }
+  
+  nav a:hover{
+    color:black;
+  }
+  
+  /* HERO */
+  .hero{
+    height:400px;
+    background:url('https://images.unsplash.com/photo-1604908176997-431d4a8e3e63') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  .hero h1{
+    background:rgba(0,0,0,0.6);
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    animation: zoomIn 1.5s ease;
+  }
+  
+  /* SECTION */
+  .section{
+    padding:60px 20px;
+    text-align:center;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    margin:20px;
+    border-radius:12px;
+  }
+  
+  h2{
+    color:white;
+    margin-bottom:20px;
+  }
+  
+  /* GRID */
+  .grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+  }
+  
+  /* CARD */
+  .card{
+    width:250px;
+    border-radius:12px;
+    overflow:hidden;
+    color:white;
+    transition:0.4s;
+    animation: fadeUp 1s ease;
+  }
+
+  .card img {
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card:hover{
+    transform:scale(1.05);
+  }
+  
+  .card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+  }
+  
+  .card h3{
+    margin:10px;
+  }
+  
+  .card p{
+    padding:0 10px 10px;
+  }
+  
+  /* BUTTON */
+  button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+  
+  /* BRAND COLORS */
+  .lays{ background: linear-gradient(#ffd600,#ffab00);}
+  .kurkure{ background: linear-gradient(#ff6f00,#e65100);}
+  .pringles{ background: linear-gradient(#d50000,#ff1744);}
+  .tooyumm{ background:linear-gradient(#ffd700,#ffab50);}
+  .doritos{ background:linear-gradient(#ab47bc,#6a1b9a)}
+  .cheetos{background:linear-gradient(#ffab50,#ffd600)}
+
+  .maggi{ background: linear-gradient(#ffeb3b,#fbc02d);}
+  .yippee{ background: linear-gradient(#ff4081,#f50057);}
+  .korean{ background: linear-gradient(#6a1b9a,#ab47bc);}
+  .knorr{ background: linear-gradient(#f50057,#ff4081);}
+  .haka{background:linear-gradient(#ab47bc,#ab47bc);}
+  
+  .noodles-bg{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);;
+  }
+  
+  /* FORM */
+  form{
+    max-width:400px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  
+  input,textarea{
+    padding:12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+  }
+  
+  button{
+    background:#ff3d00;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:6px;
+    cursor:pointer;
+  }
+  
+  /* FOOTER */
+  footer{
+    background:#ff9100;
+    color:white;
+    text-align:center;
+    padding:20px;
+  }
+  
+  /* ANIMATIONS */
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  
+  @keyframes fadeDown{
+    from{opacity:0; transform:translateY(-30px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  
+  @keyframes zoomIn{
+    from{transform:scale(0.8); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+  }
+
+  button {
+    background: linear-gradient(45deg, #ff6600, #ffcc00);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+    }
+  }
+
+  #cart-items li {
+    color: white;
+    font-size: 18px;
+  }
+  
+  h1 {
+    color: white;
+    margin-top: 20px;
+  }
+
+  h2 {
+    color: white;
+    margin-top: 20px;
+  }
